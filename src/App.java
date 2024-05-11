@@ -18,5 +18,25 @@ public class App {
         System.out.println("book1 = " + book1.getTitle());
         System.out.println("book1 = " + book1.getPublicationYear());
 
+        //2 part of homework
+        //Переопределение метода toString
+        System.out.println(book);
+        System.out.println(book1);
+
+        //Переопределение метода equals
+        Book book3 = new Book("Вечера на хуторе близ Диканьки", author, 1840);
+        System.out.println(book.equals(book3)); //true
+
+        Author author3 = new Author("Николай", "Гоголь");
+        System.out.println(author.equals(author3)); //true
+
+        //Переопределение метода hashCode
+        //hashCode.book == hashCode.book3
+        System.out.println(book.hashCode());
+        System.out.println(book3.hashCode());
+        //hashCode.author == hashCode.author3
+        System.out.println(author.hashCode());
+        System.out.println(author3.hashCode());
+
     }
 }
