@@ -9,7 +9,7 @@ public class App {
         System.out.println("book = " + book.getTitle());
         System.out.println("book = " + book.getPublicationYear());
 
-        book.setPublicationYear(1840);
+        book.setPublicationYear(1841);
         System.out.println("book = " + book.getPublicationYear());
 
         Author author1 = new Author("Эрих", "Мария Ремарк");
@@ -24,7 +24,7 @@ public class App {
         System.out.println(book1);
 
         //Переопределение метода equals
-        Book book3 = new Book("Вечера на хуторе близ Диканьки", author, 1840);
+        Book book3 = new Book("Вечера на хуторе близ Диканьки", author, 1841);
         System.out.println(book.equals(book3)); //true
 
         Author author3 = new Author("Николай", "Гоголь");
