@@ -29,21 +29,26 @@ public class Book {
 
     //2 part of homework
     //Переопределение метода toString
+    @Override
     public String toString() {
         return "Название книги - " + title + ", автор - " + author + ", год публикации - " + publicationYear;
     }
 
-    //Переопределение метода equals
+    //Переопределение метода equals (написано вручную)
+    @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Book) {
-            return title.equals(((Book) obj).getTitle()) &&
-                    publicationYear == ((Book) obj).getPublicationYear() &&
-                    author.equals(((Book) obj).getAuthor());
+        if (this == obj) return true;
+        if (obj != null && getClass() == obj.getClass()) {
+            Book book = (Book) obj;
+            return title.equals(book.title) &&
+                    publicationYear == book.publicationYear &&
+                    author.equals(book.author);
         }
         return false;
     }
 
     //Переопределение метода hashCode
+    @Override
     public int hashCode() {
         return Objects.hash(title, publicationYear, author);
     }
